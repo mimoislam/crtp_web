@@ -246,7 +246,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         _model.subConstructionPermits =
-                                                            _model
+                                                            !_model
                                                                 .subConstructionPermits;
                                                         _model
                                                             .updatePage(() {});
@@ -432,7 +432,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         _model.subConstructionCertificates =
-                                                            _model
+                                                            !_model
                                                                 .subConstructionCertificates;
                                                         _model
                                                             .updatePage(() {});
@@ -766,7 +766,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         _model.subCadastralSurveyandLandRegistration =
-                                                            _model
+                                                            !_model
                                                                 .subCadastralSurveyandLandRegistration;
                                                         safeSetState(() {});
                                                       },
@@ -799,7 +799,7 @@ class _MenuWidgetState extends State<MenuWidget> with TickerProviderStateMixin {
                                                       ),
                                                       child: Visibility(
                                                         visible: _model
-                                                            .subLegalizationBuildings,
+                                                            .subCadastralSurveyandLandRegistration,
                                                         child: Padding(
                                                           padding:
                                                               EdgeInsets.all(
