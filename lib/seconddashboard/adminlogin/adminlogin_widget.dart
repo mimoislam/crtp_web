@@ -1,35 +1,33 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
-import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'login_page_model.dart';
-export 'login_page_model.dart';
+import 'adminlogin_model.dart';
+export 'adminlogin_model.dart';
 
-class LoginPageWidget extends StatefulWidget {
-  const LoginPageWidget({super.key});
+class AdminloginWidget extends StatefulWidget {
+  const AdminloginWidget({super.key});
 
-  static String routeName = 'LoginPage';
-  static String routePath = '/loginPage';
+  static String routeName = 'adminlogin';
+  static String routePath = '/admin/login';
 
   @override
-  State<LoginPageWidget> createState() => _LoginPageWidgetState();
+  State<AdminloginWidget> createState() => _AdminloginWidgetState();
 }
 
-class _LoginPageWidgetState extends State<LoginPageWidget> {
-  late LoginPageModel _model;
+class _AdminloginWidgetState extends State<AdminloginWidget> {
+  late AdminloginModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => LoginPageModel());
+    _model = createModel(context, () => AdminloginModel());
 
     _model.emailTextFieldTextController ??= TextEditingController();
     _model.emailTextFieldFocusNode ??= FocusNode();
@@ -85,43 +83,70 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         tabletLandscape: false,
                       ))
                         Expanded(
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                100.0, 100.0, 100.0, 100.0),
-                            child: Container(
-                              width: double.infinity,
-                              height: double.infinity,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
-                              ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Expanded(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 24.0),
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(24.0),
-                                          bottomRight: Radius.circular(24.0),
-                                          topLeft: Radius.circular(24.0),
-                                          topRight: Radius.circular(24.0),
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/logo.png',
-                                          width: double.infinity,
-                                          fit: BoxFit.cover,
+                          child: Container(
+                            width: double.infinity,
+                            height: double.infinity,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                            ),
+                            child: Stack(
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(24.0),
+                                    bottomRight: Radius.circular(24.0),
+                                    topLeft: Radius.circular(24.0),
+                                    topRight: Radius.circular(24.0),
+                                  ),
+                                  child: Image.asset(
+                                    'assets/images/algeria.jpg',
+                                    width: double.infinity,
+                                    height: double.infinity,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      100.0, 200.0, 100.0, 100.0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Expanded(
+                                        flex: 2,
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(24.0),
+                                            bottomRight: Radius.circular(24.0),
+                                            topLeft: Radius.circular(24.0),
+                                            topRight: Radius.circular(24.0),
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/logo.png',
+                                            width: double.infinity,
+                                            fit: BoxFit.contain,
+                                          ),
                                         ),
                                       ),
-                                    ),
+                                      Expanded(
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(24.0),
+                                            bottomRight: Radius.circular(24.0),
+                                            topLeft: Radius.circular(24.0),
+                                            topRight: Radius.circular(24.0),
+                                          ),
+                                          child: Image.asset(
+                                            'assets/images/National_Emblem_of_Algeria_(bronze_effect).png',
+                                            width: double.infinity,
+                                            fit: BoxFit.contain,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -721,37 +746,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                           height: 12.0)),
                                                     ),
                                                     FFButtonWidget(
-                                                      onPressed: () async {
-                                                        if (_model.formKey
-                                                                    .currentState ==
-                                                                null ||
-                                                            !_model.formKey
-                                                                .currentState!
-                                                                .validate()) {
-                                                          return;
-                                                        }
-                                                        GoRouter.of(context)
-                                                            .prepareAuthEvent();
-
-                                                        final user =
-                                                            await authManager
-                                                                .signInWithEmail(
-                                                          context,
-                                                          _model
-                                                              .emailTextFieldTextController
-                                                              .text,
-                                                          _model
-                                                              .passwordTextFieldTextController
-                                                              .text,
-                                                        );
-                                                        if (user == null) {
-                                                          return;
-                                                        }
-
-                                                        context.pushNamedAuth(
-                                                            HomeWidget
-                                                                .routeName,
-                                                            context.mounted);
+                                                      onPressed: () {
+                                                        print(
+                                                            'btn_login pressed ...');
                                                       },
                                                       text: 'تسجيل الدخول',
                                                       options: FFButtonOptions(

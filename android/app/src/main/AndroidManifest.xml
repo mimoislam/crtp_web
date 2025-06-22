@@ -47,7 +47,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="crtp" android:host="crtp.com" />
+                <data android:scheme="crtp-dz2" android:host="crtp.com" />
             </intent-filter>
 
         </activity>

@@ -1,0 +1,144 @@
+{
+  "project_info": {
+    "project_number": "1086084006434",
+    "firebase_url": "https://c-rtp-faa1c-default-rtdb.firebaseio.com",
+    "project_id": "c-rtp-faa1c",
+    "storage_bucket": "c-rtp-faa1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086084006434:android:0abb58d729dbb59e96007b",
+        "android_client_info": {
+          "package_name": "com.mycompany.crtp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvS_U5z_m7oNaHoO_H2GWFfSHkmM19YXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086084006434:android:6b9bd0b438eaa26396007b",
+        "android_client_info": {
+          "package_name": "dz.startup.crtp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvS_U5z_m7oNaHoO_H2GWFfSHkmM19YXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086084006434:android:59e51c4b0c8b8da696007b",
+        "android_client_info": {
+          "package_name": "dz.startup.crtpcadaster"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvS_U5z_m7oNaHoO_H2GWFfSHkmM19YXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086084006434:android:17849dde5422f8e996007b",
+        "android_client_info": {
+          "package_name": "dz.startup.crtpcensus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvS_U5z_m7oNaHoO_H2GWFfSHkmM19YXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086084006434:android:6df60e409c55b5f296007b",
+        "android_client_info": {
+          "package_name": "dz.startup.crtpcertificates"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvS_U5z_m7oNaHoO_H2GWFfSHkmM19YXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086084006434:android:30e5d61fe646d0ab96007b",
+        "android_client_info": {
+          "package_name": "dz.startup.crtpprofessionals"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvS_U5z_m7oNaHoO_H2GWFfSHkmM19YXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086084006434:android:21fb4fc6811aa81b96007b",
+        "android_client_info": {
+          "package_name": "dz.startup.crtptp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvS_U5z_m7oNaHoO_H2GWFfSHkmM19YXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

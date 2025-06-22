@@ -5,3 +5,5 @@ export '/pages/my_profile/my_profile_widget.dart' show MyProfileWidget;
 export '/chat/chat_widget.dart' show ChatWidget;
 export '/pages/construction_permits_page/construction_permits_page_widget.dart'
     show ConstructionPermitsPageWidget;
+export '/seconddashboard/adminlogin/adminlogin_widget.dart'
+    show AdminloginWidget;
